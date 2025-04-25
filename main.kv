@@ -7,7 +7,7 @@ MDScreenManager:
         name: 'main'
         MDBoxLayout:
                 orientation: 'vertical'
-                MDNavigationBar:
+                MDNavigationDrawer:
                         title: "Home"
                         left_action_items: [['menu', lambda x: app.navigation_draw()]]
                 MDLabel:
@@ -21,7 +21,7 @@ MDScreenManager:
         name: 'post'
         MDBoxLayout:
                 orientation: 'vertical'
-                MDNavigationBar:
+                MDNavigationDrawer:
                         title: "Create Post"
                         left_action_items: [['arrow-left', lambda x: app.go_to_main()]]
                 MDTextField:
@@ -34,7 +34,7 @@ MDScreenManager:
         name: 'message'
         MDBoxLayout:
                 orientation: 'vertical'
-                MDNavigationBar:
+                MDNavigationDrawer:
                         title: "Messages"
                         left_action_items: [['arrow-left', lambda x: app.go_to_main()]]
                 MDList:
@@ -46,3 +46,6 @@ MDScreenManager:
                         text: "Send"
                         on_release: app.send_message()
 
+
+
+### technically, hindi ko kailangan to since naka separate files tong app instead of just using main.kv (old style)

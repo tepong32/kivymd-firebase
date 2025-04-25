@@ -1,5 +1,6 @@
 from kivy.lang import Builder
 from kivymd.uix.screen import MDScreen
+from kivymd.uix.navigationdrawer import navigationdrawer
 
 Builder.load_string('''
 
@@ -7,7 +8,7 @@ Builder.load_string('''
     name: 'main'
     MDBoxLayout:
         orientation: 'vertical'
-        MDNavigationBar:
+        MDNavigationDrawer:
             title: "Home"
             left_action_items: [['menu', lambda x: app.navigation_draw()]]
         MDLabel:
@@ -21,7 +22,7 @@ Builder.load_string('''
     name: 'post'
     MDBoxLayout:
         orientation: 'vertical'
-        MDNavigationBar:
+        MDNavigationDrawer:
             title: "Create Post"
             left_action_items: [['arrow-left', lambda x: app.go_to_main()]]
         MDTextField:
@@ -35,7 +36,7 @@ Builder.load_string('''
     name: 'message'
     MDBoxLayout:
         orientation: 'vertical'
-        MDNavigationBar:
+        MDNavigationDrawer:
             title: "Messages"
             left_action_items: [['arrow-left', lambda x: app.go_to_main()]]
         MDList:
