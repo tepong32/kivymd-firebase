@@ -1,6 +1,5 @@
 from kivy.lang import Builder
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.navigationdrawer import navigationdrawer
 
 Builder.load_string('''
 
@@ -14,7 +13,7 @@ Builder.load_string('''
         MDLabel:
             text: "Welcome to the Social Media App"
             halign: "center"
-        MDRaisedButton:
+        MDIconButton:
             text: "Create Post"
             on_release: app.root.current = 'post'
 
@@ -28,7 +27,7 @@ Builder.load_string('''
         MDTextField:
             id: text_field
             hint_text: "What's on your mind?"
-        MDRaisedButton:
+        MDIconButton:
             text: "Post"
             on_release: app.create_post()
 
@@ -44,7 +43,7 @@ Builder.load_string('''
         MDTextField:
             id: message_input
             hint_text: "Type a message"
-        MDRaisedButton:
+        MDIconButton:
             text: "Send"
             on_release: app.send_message()
 ''')
